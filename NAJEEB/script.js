@@ -3,9 +3,24 @@ let userPassword = prompt("Enter Your Passowrd");
 
 let isNumber = Number(userPassword);
 
+function isnumber(val) {
+    for (let i = 0; i < val.length; i++) {
+        const element = val[i];
+        let isNumber = Number(element);
+
+        if (!Number.isNaN(isNumber)) {
+            return true;
+        }
+        if (['@','#'].includes(element)){
+
+        }
+    }
+}
+
 if (Number.isNaN(isNumber)) {
-    console.log('text');
+    isString(userPassword)
 } else {
+    isnumber(userPassword);
     console.log("number");
 }
 
@@ -25,16 +40,8 @@ function checkPassword(userPassword) {
 
 // alert(checkPassword(userPassword));
 
-function number(val) {
-    for (let i = 0; i < val.length; i++) {
-        const element = val[i];
-        console.log(element);
-
-    }
-}
 
 
-// number(userPassword);
 
 
 // function checkType(userPassword) {
@@ -47,6 +54,16 @@ function number(val) {
 
 
 
-function name(params) {
+// function name(params) {
 
+// }
+
+let price = +prompt("price")
+let quantity = +prompt("price")
+
+function bill(price, quantity) {
+    return price * quantity;
 }
+
+let result = bill(price, quantity);
+alert(result);
